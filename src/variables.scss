@@ -1,0 +1,6 @@
+// easiest way to get access to primary
+@import '~@angular/material/theming';
+
+@import "theme";
+$primary: map-get($candy-app-theme, primary);
+//$primary: map-get($mat-deep-purple, primary);
