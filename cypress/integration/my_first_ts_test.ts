@@ -2,7 +2,7 @@ describe('My First Test', () => {
 
   beforeEach(() => {
 
-    cy.visit('http://localhost:4200/');
+    cy.visit('');
   });
 
   it('Visits the staring page', () => {
