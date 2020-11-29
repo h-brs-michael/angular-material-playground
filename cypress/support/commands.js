@@ -10,6 +10,21 @@
 //
 //
 // -- This is a parent command --
+Cypress.Commands.add("navigateToPage", (linkName) => {
+
+  cy.get('mat-sidenav').then(($nav) => {
+    // jQuery
+    if (!$nav.find(linkName).length) {
+      cy.contains('Gruppen Link').click();
+    }
+    cy.contains(linkName).click();
+  });
+
+});
+
+
+
+// -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 //
 //

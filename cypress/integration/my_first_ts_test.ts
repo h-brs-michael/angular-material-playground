@@ -1,21 +1,8 @@
 describe('My First Test', () => {
 
-  // todo: move to PO of specific page or cypress command
-  const navigateTo = (linkLabel: string) => {
-
-    cy.get('mat-sidenav').then(($nav) => {
-      // jQuery
-      if (!$nav.find(linkLabel).length) {
-        cy.contains('Gruppen Link').click();
-      }
-      cy.contains(linkLabel).click();
-    });
-  };
-
   beforeEach(() => {
 
     cy.visit('http://localhost:4200/');
-
   });
 
   it('Visits the staring page', () => {
@@ -49,9 +36,9 @@ describe('My First Test', () => {
     cy.url().should('include', '/example');
   });
 
-  it('Gets, types and asserts input field', () => {
+  it('test input field on form page/ Page 2', () => {
 
-    navigateTo('Page 2');
+    cy.navigateToPage('Page 2');
 
     cy.contains('Legacy form field');
 
@@ -81,7 +68,7 @@ describe('My First Test', () => {
 
   it('test tree page', () => {
 
-    navigateTo('tree');
+    cy.navigateToPage('tree');
 
     cy.contains('src').should('not.exist');
     cy.contains('cdk').should('not.exist');
