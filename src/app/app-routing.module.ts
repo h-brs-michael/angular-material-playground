@@ -7,6 +7,7 @@ import { TreeComponent } from './tree/tree.component';
 import { DragNDropComponent } from './drag-ndrop/drag-ndrop.component';
 import { Page2Component } from './page2/page2.component';
 import { Page3Component } from './page3/page3.component';
+import { QuoteOfTheDayComponent } from './quote-of-the-day/quote-of-the-day.component';
 
 const routes: Routes = [
   {
@@ -37,9 +38,14 @@ const routes: Routes = [
   {
     path: 'page-2',
     component: Page2Component
-  }, {
+  },
+  {
     path: 'page-3',
     component: Page3Component
+  },
+  {
+    path: 'qotd',
+    component: QuoteOfTheDayComponent
   },
 ];
 

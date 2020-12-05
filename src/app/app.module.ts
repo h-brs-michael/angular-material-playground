@@ -33,6 +33,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioButton, MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { QuoteOfTheDayComponent } from './quote-of-the-day/quote-of-the-day.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     TreeComponent,
     DragNDropComponent,
     Page2Component,
-    Page3Component
+    Page3Component,
+    QuoteOfTheDayComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +75,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatSelectModule,
     MatRadioModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
